@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1> hi emiliana welcome to laravel</h1>
+    <h2> new line</h2>
 </body>
 </html>
