@@ -12,7 +12,7 @@
 
 <body style="background-color:grey">
 
-    <!-- <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
         <h1 class="display-4 fw-bold text-body-emphasis">Centered screenshot</h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s
@@ -29,7 +29,10 @@
                     width="700" height="500" loading="lazy">
             </div>
         </div>
-    </div> -->
+    </div>
+
+
+
     <div>
         <nav class="navbar navbar-expand-sm bg-light " style="box-shadow: 0 .125rem .25rem rgb(146, 143, 143);;">
             <div class="container-fluid justify-content-end">
@@ -47,7 +50,7 @@
                         <a class="nav-link" href="AboutUs">About Us</a>
                     </li>
                     <li class="nav-item pl-4">
-                        <a class="nav-link" href="{{ route('login') }}">login</a>
+                        <a class="nav-link" href="login">login</a>
                     </li>
                 </ul>
             </div>
