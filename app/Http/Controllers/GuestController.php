@@ -12,4 +12,9 @@ class GuestController extends Controller
         // return view('welcome-review');
         return view('welcome');
     }
+
+    function aboutUs() {
+        return view('AboutUs');
+        
+    }
 }

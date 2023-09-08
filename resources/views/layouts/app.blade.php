@@ -22,7 +22,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ route('welcome') }}">
                     {{ config('app.name', 'Pangisha Online') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -39,8 +39,6 @@
 
                     <!-- Right Side Of Navbar -->
                     @auth
-
-
                         <ul class="navbar-nav ms-auto">
                             <!-- Authentication Links -->
                             @guest
