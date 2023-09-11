@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -28,6 +29,7 @@ class HomeController extends Controller
         $data['rolename'] = $role->name;
 
         if ($data['rolename'] == 'admin') {
+            $data['roles'] = Role::get();            
             return view('adminDash', $data);
         }else {
             return view('home', $data);
