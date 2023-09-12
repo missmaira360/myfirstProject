@@ -27,8 +27,13 @@ Route::middleware(['auth'])->group(function () {
 
     Route::group(['as' => 'access.', 'prefix' => 'access/'], function () {
         Route::get('/users', [AccessControl::class, 'index'])->name('users');
+        Route::get('/createUser', [AccessControl::class, 'create'])->name('createUser');
+
+        
 
         Route::post('/register-user', [AccessControl::class, 'registerUser'])->name('register-user');
+        // Route::post('/register-user', [AccessControl::class, 'registerUser'])->name('register-user');
+
 
 
 

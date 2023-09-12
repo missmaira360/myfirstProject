@@ -29,7 +29,6 @@ class HomeController extends Controller
         $data['rolename'] = $role->name;
 
         if ($data['rolename'] == 'admin') {
-            $data['roles'] = Role::get();            
             return view('adminDash', $data);
         }else {
             return view('home', $data);

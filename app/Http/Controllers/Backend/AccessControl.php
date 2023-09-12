@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 
@@ -11,13 +12,22 @@ class AccessControl extends Controller
 {    
     function index(Request $request) {
 
-        $data['title'] = 'Existing Users';
+        $data['title'] = 'Existing Users Panel';
 
         # LOAD USER FROM THE TABLE
-        $data['users'] = '';
+       $data['users'] = User::get();
 
         # BIND THEM INTO THE VIEW
-        return view('', $data);
+        return view('backend.users.list', $data);
+
+    }
+
+    function create( Request $request) {
+        $data['roles'] = Role::get();  
+        $data['title'] = 'new user';
+
+        return view('backend.users.createUser', $data);
+        
     }
 
 
@@ -36,6 +46,6 @@ class AccessControl extends Controller
         ])->assignRole($data['role']);
 
         $messag = $userCreated->name. ' Has been registered successfully!';
-        return redirect()->back()->with(['success_msg' => $messag]);
+        return redirect()->route('access.users')->with(['success_msg' => $messag]);
     }
 }
