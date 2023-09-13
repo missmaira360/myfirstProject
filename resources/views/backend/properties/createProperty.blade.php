@@ -6,7 +6,7 @@
                 <div class="card">
                     <div class="card-header">
                         {{ __($title) }}
-                        <a class="btn btn-outline-info text-end ml-5" href="{{ route('access.users') }}">User List</a>
+                        <a class="btn btn-outline-info text-end ml-5" href="{{ route('property.users') }}">property List</a>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="card-body fs-xs">
-                        <form method="POST" action="{{ route('access.register-user') }}">
+                        <form method="POST" action="{{ route('property.register-user') }}">
                             @csrf
 
                             <div class="row mb-3">
@@ -103,3 +103,4 @@
 
     </div>
 @endsection
+

@@ -1,7 +1,4 @@
-{{-- @extends('layouts.adminLayout') --}}
 @extends('layouts.app')
-
-
 @section('content')
     <div class="container">
         <div class="row">
@@ -13,12 +10,9 @@
                 </div>
             </div>
         </div>
-
-       
-
-        <div class="col-md-8 offset-md-2 mt-5">
-
-            <a class="btn btn-outline-info text-end ml-5" href="{{ route('access.users') }}">create user</a>
-        </div>
     </div>
-    @endsection
+<div class="col-md-8 offset-md-2 mt-5">
+    <a class="btn btn-outline-info text-end ml-5" href="{{ route('property.users') }}">list of property</a>
+</div>
+@endsection
+

@@ -30,8 +30,13 @@ class HomeController extends Controller
 
         if ($data['rolename'] == 'admin') {
             return view('adminDash', $data);
-        }else {
-            return view('home', $data);
+        }
+        
+        elseif ($data['rolename'] == 'agent'){
+            return view('agent', $data);
+        }
+        else{
+            return view('home');
         }
     }
 }
